@@ -1,0 +1,21 @@
+Metric Name,Value / Result,Scientific Meaning / Specification
+Total Raw Specimens,6625,Initial dataset size
+Missing Landmark Count,1,Specimens missing required landmark coordinates
+Missing Landmark Percentage (%),0.02%,Completeness of digitized dataset
+Anatomical Swapped Cross-Section Repaired,0,Specimens automatically repaired for inverted cross-section Y-columns
+Duplicate File_Name Rows,0,Data consistency & duplicate files
+Duplicate Landmark Coordinate Rows,8,Identical landmark coordinate entries
+Valid Processed Specimens,6621,Specimens passing initial data hygiene
+GPA Superimposition Convergence,Converged,Procrustes alignment optimization status
+GPA Iterations to Converge,3,Number of iterations required for convergence < 1e-7
+PCA Variance Explained (PC1 %),27.20%,First principal component shape variance
+PCA Variance Explained (PC2 %),18.29%,Second principal component shape variance
+PCA Cumulative Variance (Top 5 PCs %),70.05%,Morphological variance captured by leading 5 PCs
+Procrustes Distance Outliers (Mean + 3SD),48 (0.72%),Shape anomalies violating overall consensus shape
+PCA Morphospace Outliers (|Z| > 3),348 (5.26%),Multivariate morphospace outliers
+Mahalanobis Distance Outliers (Chi-Square 97.5%),402 (6.07%),Covariance-weighted multivariate shape anomalies
+Centroid Size Z-Score Outliers,58 (0.88%),Scale distortions exceeding 3 standard deviations
+Bounding Box Area Z-Score Outliers,40 (0.60%),Aspect ratio and extent digitizing errors
+Total Composite Outlier Specimens,418 (6.31%),Specimens flagged by at least one shape/digitization metric
+Mean Landmark Coordinate Variance,0.000425,Stability of landmark placement across population
+Final High-Quality Cleaned Specimens Retained,6203 (93.69%),Cleaned dataset size ready for morphometric model training

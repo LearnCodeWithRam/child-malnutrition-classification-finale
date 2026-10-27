@@ -1,0 +1,14 @@
+^CRAN-RELEASE$
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^README\.Rmd$
+^data-raw$
+^\.travis\.yml$
+^appveyor\.yml$
+^codecov\.yml$
+^docs$
+^cran-comments\.md$
+pkgdown\.yml$
+^\.github$
+^CRAN-SUBMISSION$

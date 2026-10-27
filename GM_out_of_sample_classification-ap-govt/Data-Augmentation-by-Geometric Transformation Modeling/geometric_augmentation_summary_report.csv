@@ -1,0 +1,15 @@
+Metric Name,Value / Result,Scientific Rationale
+Source Dataset Total Clean Specimens,6203,Master clean input from quality_data_extration.ipynb
+ONC Original Specimen Count,5279,Healthy control clinical baseline
+MAM Original Specimen Count,707,Moderate acute malnutrition baseline
+SAM Original Specimen Count,217,Severe acute malnutrition minority baseline
+Synthetic SAM Generated (MAM Balance),490,Synthetic SAM generated via affine transformation modeling
+Synthetic SAM Generated (Full 1:1:1 Balance),5062,Synthetic SAM generated to match ONC cohort size
+Synthetic MAM Generated (Full 1:1:1 Balance),4572,Synthetic MAM generated to match ONC cohort size
+SAM Total Count (Pairwise Balanced),707,Balanced SAM matching MAM cohort size
+Total Dataset Count (Pairwise Balanced),6693,"ONC=5279, MAM=707, SAM=707"
+SAM Total Count (Full 1:1:1 Balanced),5279,Equal representation matching ONC cohort size
+MAM Total Count (Full 1:1:1 Balanced),5279,Equal representation matching ONC cohort size
+Total Dataset Count (Full 1:1:1 Balanced),15837,"ONC=5279, MAM=5279, SAM=5279"
+SAM PC1 KS-Test p-value,0.6015,Distribution consistency test (p > 0.05 indicates distribution alignment)
+MAM PC1 KS-Test p-value,0.0255,Distribution consistency test (p > 0.05 indicates distribution alignment)

@@ -1,0 +1,39 @@
+{
+  "model_metadata": {
+    "pipeline_name": "SAM_Photo_Diagnosis_Ensemble_Traffic_Light_Production",
+    "version": "4.0.0",
+    "description": "Offline mobile ensemble (40% Shrinkage LDA + 60% XGBoost) with 3-tier Traffic-Light clinical triage",
+    "training_cohort_size": 7280,
+    "target_classes": [
+      "ONC (Healthy)",
+      "MC (Malnourished)"
+    ],
+    "class_balance": "1:1 Exact Parity (3640 MC : 3640 ONC via TPS)",
+    "triage_system": "3-Tier Traffic Light (Green < 0.20, Yellow 0.20-0.50, Red >= 0.50)",
+    "validation_protocol": "Balanced Unseen Test Cohort (N = 1,456) & Strict Out-of-Sample Real Cohort (N = 4,607)",
+    "landmarks_active": 18,
+    "semilandmarks_dropped": [
+      2,
+      3
+    ],
+    "feature_dimensionality": 36,
+    "ensemble_weights": {
+      "shrinkage_lda": 0.4,
+      "xgboost": 0.6
+    },
+    "triage_cutoffs": {
+      "green_normal_upper": 0.2,
+      "yellow_at_risk_upper": 0.5,
+      "red_critical_lower": 0.5
+    }
+  },
+  "clinical_metrics": {
+    "real_mc_capture_red_plus_yellow": "88.46%",
+    "synthetic_mc_capture_red_plus_yellow": "99.45%",
+    "combined_mixed_mc_capture_red_plus_yellow": "94.09%",
+    "combined_mixed_mc_sensitivity_default_cutoff": "76.10%",
+    "yellow_case_multimodal_resolution_accuracy": "84.06%",
+    "end_to_end_accuracy_with_multimodal_yellow": "83.65%",
+    "overall_roc_auc_ensemble": "0.8626"
+  }
+}

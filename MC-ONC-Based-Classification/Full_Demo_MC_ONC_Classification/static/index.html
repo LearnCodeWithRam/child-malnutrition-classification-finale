@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pediatric Arm Geometric Morphometrics & Dual-Tier AI Triage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="background-glow glow-1"></div>
+  <div class="background-glow glow-2"></div>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand-title">PediaMorph AI <span class="badge-version">v2.0 Local Demo</span></h1>
+          <p class="brand-subtitle">Frontline Left-Arm Geometric Morphometrics & Dual-Tier Child Malnutrition Triage</p>
+        </div>
+      </div>
+      
+      <div class="header-badges">
+        <span class="status-pill status-ready">
+          <span class="dot"></span> No Checkerboard Required
+        </span>
+        <span class="status-pill status-offline">
+          <span class="dot"></span> Tier 1 Mobile Edge (LDA+XGB)
+        </span>
+        <span class="status-pill status-cloud">
+          <span class="dot"></span> Tier 2 Cloud EGAT (17-Node)
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+
+    <!-- Top Card: Image Acquisition & Clinical Samples -->
+    <section class="card upload-card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-step-badge">Phase 1 Input</span>
+          <h2 class="card-title">Arm Photograph Acquisition</h2>
+        </div>
+        <p class="card-desc">Upload a field photograph of a child's left arm, or select a preloaded clinical validation sample.</p>
+      </div>
+
+      <div class="upload-grid">
+        <!-- Dropzone -->
+        <div class="dropzone" id="dropzone">
+          <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" class="file-input-hidden">
+          <div class="dropzone-content" id="dropzone-prompt">
+            <div class="drop-icon-circle">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+              </svg>
+            </div>
+            <h3 class="dropzone-title">Drag & Drop Child Arm Photo</h3>
+            <p class="dropzone-sub">or <button type="button" class="btn-browse" id="btn-browse">Browse Image</button></p>
+            <p class="dropzone-hint">Natural background supported • Standard JPEG/PNG • Left arm visible</p>
+          </div>
+
+          <div class="dropzone-preview hidden" id="dropzone-preview">
+            <img id="preview-img" src="" alt="Selected Arm Photo">
+            <div class="preview-overlay">
+              <span id="preview-filename">image.jpg</span>
+              <button type="button" class="btn-change-img" id="btn-change-img">Change</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clinical Sample Selector -->
+        <div class="samples-panel">
+          <div class="samples-header">
+            <h3 class="samples-title">Or Select a Clinical Test Sample:</h3>
+            <span class="samples-tag">Instant 1-Click Validation</span>
+          </div>
+          
+          <div class="samples-list" id="samples-container">
+            <div class="loading-samples">Loading clinical samples...</div>
+          </div>
+
+          <div class="action-bar">
+            <button type="button" class="btn-primary" id="btn-run-analysis" disabled>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              <span>Run Morphometric Triage</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Processing Progress Bar -->
+      <div class="pipeline-progress hidden" id="pipeline-progress">
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-steps" id="progress-steps">
+          <span class="step-label active" id="pstep-1">1. Ingesting</span>
+          <span class="step-label" id="pstep-2">2. Pose & Arm Mask</span>
+          <span class="step-label" id="pstep-3">3. 22 Landmarks</span>
+          <span class="step-label" id="pstep-4">4. Procrustes Decoupling</span>
+          <span class="step-label" id="pstep-5">5. Tier 1 Mobile Ensemble</span>
+          <span class="step-label" id="pstep-6">6. Tier 2 Cloud EGAT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section (Initially Hidden) -->
+    <div id="results-wrapper" class="hidden">
+
+      <!-- TRAFFIC LIGHT TRIAGE BANNER -->
+      <section class="triage-banner" id="triage-banner">
+        <div class="triage-badge-icon" id="triage-icon">🟢</div>
+        <div class="triage-info">
+          <div class="triage-header-row">
+            <span class="triage-tag" id="triage-tier-name">TIER 1 ENSEMBLE CLASSIFICATION</span>
+            <span class="triage-timing" id="triage-time">Executed in 0.45s</span>
+          </div>
+          <h2 class="triage-headline" id="triage-headline">Optimal Nutritional Status (Normal Healthy ONC)</h2>
+          <p class="triage-action" id="triage-action">Child is thriving normally. Continue standard routine monthly community growth monitoring.</p>
+        </div>
+        <div class="triage-score-box">
+          <span class="score-label">Malnutrition Probability</span>
+          <span class="score-value" id="triage-score-val">12.4%</span>
+          <div class="score-bar-mini">
+            <div class="score-fill-mini" id="score-fill-mini"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DUAL TIER DIAGNOSTIC CARDS -->
+      <div class="dual-tier-grid">
+
+        <!-- TIER 1 MOBILE EDGE CARD -->
+        <section class="card tier-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <span class="tier-pill tier-pill-mobile">Tier 1 • Mobile Edge Triage</span>
+              <h3 class="card-title">Ensemble Morphometrics (Offline)</h3>
+            </div>
+            <span class="badge-stat">40% LDA + 60% XGB</span>
+          </div>
+
+          <div class="tier-body">
+            <div class="metric-meter-container">
+              <div class="meter-labels">
+                <span>🟢 Green (&lt;25%)</span>
+                <span>🟡 Yellow (25-50%)</span>
+                <span>🔴 Red (&gt;50%)</span>
+              </div>
+              <div class="meter-track">
+                <div class="meter-zone zone-green"></div>
+                <div class="meter-zone zone-yellow"></div>
+                <div class="meter-zone zone-red"></div>
+                <div class="meter-needle" id="meter-needle" style="left: 20%;"></div>
+              </div>
+            </div>
+
+            <div class="submodels-breakdown">
+              <div class="submodel-item">
+                <span class="submodel-name">Shrinkage LDA (40% Weight)</span>
+                <span class="submodel-val" id="lda-prob-val">10.2%</span>
+              </div>
+              <div class="submodel-item">
+                <span class="submodel-name">Pure Shape XGBoost (60% Weight)</span>
+                <span class="submodel-val" id="xgb-prob-val">14.1%</span>
+              </div>
+              <div class="submodel-item">
+                <span class="submodel-name">Centroid Size (CS)</span>
+                <span class="submodel-val" id="cs-val">41.20</span>
+              </div>
+              <div class="submodel-item">
+                <span class="submodel-name">Allometric Residual Decoupling</span>
+                <span class="submodel-val text-accent">36D Standardized</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TIER 2 ONLINE CLOUD EGAT CARD -->
+        <section class="card tier-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <span class="tier-pill tier-pill-cloud">Tier 2 • Cloud Deep Learning</span>
+              <h3 class="card-title">17-Node EGAT Graph Attention</h3>
+            </div>
+            <span class="badge-stat">9 Calipers Analysis</span>
+          </div>
+
+          <div class="tier-body">
+            <div class="egat-spotlight">
+              <div class="spotlight-metric">
+                <span class="spotlight-label">EGAT Neural Malnutrition Score</span>
+                <span class="spotlight-val" id="egat-prob-val">88.4%</span>
+              </div>
+              <div class="spotlight-locus">
+                <span class="spotlight-label">Primary Anatomical Wasting Locus</span>
+                <span class="locus-badge" id="egat-locus-val">Mid-Upper Arm / MUAC Site (L16-L15)</span>
+              </div>
+            </div>
+
+            <!-- Wireframe Heatmap Image -->
+            <div class="heatmap-container">
+              <img id="egat-heatmap-img" src="" alt="17-Node Wireframe Attention Heatmap">
+            </div>
+
+            <!-- 9 Calipers Attention List -->
+            <div class="calipers-list-wrapper">
+              <h4 class="calipers-header">9 Transverse Calipers Deformation Attention:</h4>
+              <div class="calipers-grid" id="calipers-container">
+                <!-- Populated dynamically via JS -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- BORDERLINE YELLOW MULTIMODAL RESOLVER -->
+      <section class="card multimodal-card" id="multimodal-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="tier-pill tier-pill-yellow">Borderline Escalation Protocol</span>
+            <h3 class="card-title">Secondary Multimodal Confirmation (&gt;89.7% Accuracy)</h3>
+          </div>
+          <span class="badge-stat">38D Fusion Model</span>
+        </div>
+        
+        <p class="multimodal-desc">
+          When the child falls into the 🟡 <strong>Yellow Borderline Zone</strong> (25% - 50% probability), enter the child's sex and physical tape MUAC (cm) to achieve definitive clinical confirmation.
+        </p>
+
+        <form class="multimodal-form" id="multimodal-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mm-sex">Child Sex:</label>
+              <select id="mm-sex" class="form-input">
+                <option value="M">Male (M)</option>
+                <option value="F">Female (F)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mm-muac">Tape MUAC Measurement (cm):</label>
+              <input type="number" id="mm-muac" step="0.1" min="7.0" max="22.0" placeholder="e.g. 13.5" class="form-input" required>
+            </div>
+            <div class="form-group form-action">
+              <button type="submit" class="btn-resolve" id="btn-resolve">
+                <span>Definitively Resolve Case</span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="multimodal-result hidden" id="multimodal-result">
+          <div class="mm-result-banner" id="mm-result-banner">
+            <div class="mm-icon" id="mm-icon">✅</div>
+            <div class="mm-details">
+              <h4 id="mm-triage-title">Confirmed Normal (Healthy ONC)</h4>
+              <p id="mm-triage-sub">Multimodal 38D Probability: 14.2% • Protocol Verified</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHASE 1 MORPHOMETRIC VISION & LANDMARKS -->
+      <section class="card vision-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-step-badge">Phase 1 Morphometrics</span>
+            <h3 class="card-title">Arm Contour & 22 Anatomical Landmarks</h3>
+          </div>
+          <span class="badge-stat" id="vision-stats-badge">Scale: 28.5 cm Canonical Arm</span>
+        </div>
+
+        <!-- Biometric Summary Grid -->
+        <div class="biometrics-grid">
+          <div class="biometric-tile">
+            <span class="tile-label">Total Arm Length</span>
+            <span class="tile-val" id="bio-arm-len">28.5 cm</span>
+            <span class="tile-sub">Shoulder to Wrist</span>
+          </div>
+          <div class="biometric-tile">
+            <span class="tile-label">Upper Arm Length</span>
+            <span class="tile-val" id="bio-upper-len">13.2 cm</span>
+            <span class="tile-sub">Acromion to Olecranon</span>
+          </div>
+          <div class="biometric-tile">
+            <span class="tile-label">Forearm Length</span>
+            <span class="tile-val" id="bio-forearm-len">15.3 cm</span>
+            <span class="tile-sub">Olecranon to Styloid</span>
+          </div>
+          <div class="biometric-tile tile-accent">
+            <span class="tile-label">Vision-Estimated MUAC</span>
+            <span class="tile-val text-accent" id="bio-muac">14.6 cm</span>
+            <span class="tile-sub">Contour Diameter × π</span>
+          </div>
+        </div>
+
+        <!-- Visual Previews Grid -->
+        <div class="visuals-grid">
+          <div class="visual-box">
+            <h4 class="visual-title">1. Arm Contour & Segmented Mask Overlay</h4>
+            <div class="visual-img-wrap">
+              <img id="vis-contour-img" src="" alt="Arm Contour Overlay">
+            </div>
+          </div>
+          <div class="visual-box">
+            <h4 class="visual-title">2. Metric Cartesian Wireframe & Caliper Projections</h4>
+            <div class="visual-img-wrap">
+              <img id="vis-cartesian-img" src="" alt="Cartesian Coordinate Wireframe">
+            </div>
+          </div>
+        </div>
+
+        <!-- Expandable Landmark Table -->
+        <div class="landmarks-accordion">
+          <button type="button" class="btn-toggle-landmarks" id="btn-toggle-landmarks">
+            <span>View 22 Morphometric Landmark Coordinates Table</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="chevron-icon">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          
+          <div class="landmarks-table-container hidden" id="landmarks-table-container">
+            <table class="landmarks-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Landmark Name</th>
+                  <th>Category</th>
+                  <th>X (cm)</th>
+                  <th>Y (cm)</th>
+                  <th>Pixel Coordinates</th>
+                </tr>
+              </thead>
+              <tbody id="landmarks-tbody">
+                <!-- Populated dynamically via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p>PediaMorph AI Diagnostic System • Built for Autonomous Community Health Malnutrition Screening</p>
+      <p class="footer-sub">Zero-Checkerboard Computer Vision Pipeline + Shrinkage LDA & XGBoost Ensemble + 17-Node EGAT Cloud Architecture</p>
+    </div>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

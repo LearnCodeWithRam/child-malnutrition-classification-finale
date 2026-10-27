@@ -1,0 +1,7 @@
+Experiment,Data Used,Synthetic %,SAM Recall,SAM Precision,SAM F1,Macro F1,Balanced Acc
+Exp 1: Baseline,5393-722-220,0.0%,0.2409,0.6611,0.3527,0.6081,0.5584
+Exp 2: Real Only (220),220-220-220,0.0%,0.6773,0.6328,0.653,0.6415,0.6424
+Exp 3: Balanced 500,500-500-500,18.7%,0.5682,0.5494,0.5581,0.6586,0.6601
+Exp 4: Preferred 722,722-722-722,23.2%,0.4909,0.6263,0.5473,0.6837,0.6733
+Exp 5: SMOTE-Tomek,Full Data (5393-722-220),Dynamic Oversampling,0.4682,0.5253,0.4948,0.6705,0.6618
+Exp 6: Borderline-SMOTE,Full Data (5393-722-220),Dynamic Oversampling,0.4045,0.5869,0.4771,0.6621,0.6397

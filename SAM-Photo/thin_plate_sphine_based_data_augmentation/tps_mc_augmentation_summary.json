@@ -1,0 +1,21 @@
+{
+    "dataset_name": "final_cleaned_dataset_full_with_muac_and_class_corrected_with_who_R_package_and_removed_underweight_stunted_and_merge_SAM_MAM_to_MC_and_remove_borderline_DP.csv",
+    "n_mc_authentic": 967,
+    "n_onc_authentic": 3640,
+    "stage_1_2x": {
+        "synthetic_samples": 967,
+        "total_mc_samples": 1934,
+        "total_cohort_samples": 3868
+    },
+    "stage_2_onc_parity": {
+        "synthetic_samples": 2673,
+        "total_mc_samples": 3640,
+        "total_cohort_samples": 7280
+    },
+    "ssm_mode_1_variance": 0.2538493064722088,
+    "ssm_top_5_cumulative_variance": 0.7134287243933388,
+    "ssm_top_10_cumulative_variance": 0.8722572860705506,
+    "centroid_size_mean": 39.778765866793144,
+    "centroid_size_std": 6.40441794224229,
+    "muac_residual_std": 1.2829055204620345
+}

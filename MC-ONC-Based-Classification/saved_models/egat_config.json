@@ -1,0 +1,110 @@
+{
+  "version": "2.0.0",
+  "service_name": "SAM_Photo_Diagnosis_Cloud_17Node_EGAT_Verification_Service",
+  "endpoint": "POST /api/v1/diagnose-malnutrition",
+  "model_architecture": "EdgeConditionedGAT (2 Layers, 4 Heads, 64 Hidden Dim, 17 Nodes)",
+  "active_landmarks_17": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "traffic_light_cutoffs": {
+    "green_upper": 0.25,
+    "yellow_upper": 0.5,
+    "red_lower": 0.5
+  },
+  "calipers": [
+    {
+      "caliper_id": 1,
+      "name": "Proximal Shoulder Closure (L1-L4)",
+      "landmarks": [
+        1,
+        4
+      ]
+    },
+    {
+      "caliper_id": 2,
+      "name": "Proximal Deltoid (L12-L4)",
+      "landmarks": [
+        12,
+        4
+      ]
+    },
+    {
+      "caliper_id": 3,
+      "name": "Proximal Brachium/Bicep (L14-L13)",
+      "landmarks": [
+        14,
+        13
+      ]
+    },
+    {
+      "caliper_id": 4,
+      "name": "Mid-Upper Arm / MUAC Site (L16-L15)",
+      "landmarks": [
+        16,
+        15
+      ]
+    },
+    {
+      "caliper_id": 5,
+      "name": "Distal Brachium / Pre-Elbow (L18-L17)",
+      "landmarks": [
+        18,
+        17
+      ]
+    },
+    {
+      "caliper_id": 6,
+      "name": "Elbow Joint Epicondyles (L10-L9)",
+      "landmarks": [
+        10,
+        9
+      ]
+    },
+    {
+      "caliper_id": 7,
+      "name": "Proximal Forearm (L8-L7)",
+      "landmarks": [
+        8,
+        7
+      ]
+    },
+    {
+      "caliper_id": 8,
+      "name": "Mid Forearm (L6-L5)",
+      "landmarks": [
+        6,
+        5
+      ]
+    },
+    {
+      "caliper_id": 9,
+      "name": "Distal Wrist Closure (L20-L19)",
+      "landmarks": [
+        20,
+        19
+      ]
+    }
+  ],
+  "benchmark_metrics": {
+    "unseen_test_cohort_n": 1456,
+    "roc_auc": "0.8686",
+    "zero_child_left_behind_capture": "94.09%",
+    "onc_specificity": "46.70%"
+  }
+}

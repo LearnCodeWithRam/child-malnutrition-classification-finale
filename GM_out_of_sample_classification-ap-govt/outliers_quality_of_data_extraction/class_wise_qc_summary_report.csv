@@ -1,0 +1,4 @@
+Class,Total Specimens,Procrustes Outliers (%),PCA Outliers (%),Mahalanobis Outliers (%),Digitizing Error Flags (%),Composite Outliers (%)
+ONC,5644,43 (0.76%),303 (5.37%),349 (6.18%),73 (1.29%),365 (6.47%)
+MAM,745,3 (0.40%),31 (4.16%),35 (4.70%),8 (1.07%),38 (5.10%)
+SAM,232,2 (0.86%),14 (6.03%),18 (7.76%),1 (0.43%),15 (6.47%)

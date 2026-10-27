@@ -1,0 +1,27 @@
+{
+    "dataset_source": "e:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\SAM-Photo\\thin_plate_sphine_based_data_augmentation\\final_cleaned_dataset_full_with_muac_corrected_with_who_R_package.csv",
+    "n_original_sam": 214,
+    "n_synthetic_sam_generated": 386,
+    "n_target_sam_total": 600,
+    "tps_method": "Statistical Shape Model (SSM) + Thin Plate Spline (TPS)",
+    "tps_alpha": 0.005,
+    "ssm_modes": 10,
+    "ssm_cumulative_variance_top5": 0.7612006751527816,
+    "ssm_cumulative_variance_top10": 0.8947077508074959,
+    "centroid_size": {
+        "mean": 39.75019224500773,
+        "std": 6.426047791016112
+    },
+    "muac_residual_std": 1.5417185517596372,
+    "files_generated": {
+        "sam_augmented_600_total": "e:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\SAM-Photo\\thin_plate_sphine_based_data_augmentation\\sam_augmented_600_total.csv",
+        "sam_pure_synthetic_600": "e:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\SAM-Photo\\thin_plate_sphine_based_data_augmentation\\sam_pure_synthetic_600.csv",
+        "final_cleaned_dataset_full_with_sam_augmented_600": "e:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\SAM-Photo\\thin_plate_sphine_based_data_augmentation\\final_cleaned_dataset_full_with_sam_augmented_600.csv",
+        "final_cleaned_dataset_balanced_600_sam_onc": "e:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\SAM-Photo\\thin_plate_sphine_based_data_augmentation\\final_cleaned_dataset_balanced_600_sam_onc.csv",
+        "benchmark_comparison_csv": "e:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\SAM-Photo\\thin_plate_sphine_based_data_augmentation\\tps_model_benchmark_comparison.csv",
+        "figure_1_wireframes": "e:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\SAM-Photo\\thin_plate_sphine_based_data_augmentation\\figures\\fig1_authentic_arm_wireframe_comparison.png",
+        "figure_2_deformation_grid": "e:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\SAM-Photo\\thin_plate_sphine_based_data_augmentation\\figures\\fig2_tps_deformation_grid_and_vectors.png",
+        "figure_3_pca_morphospace": "e:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\SAM-Photo\\thin_plate_sphine_based_data_augmentation\\figures\\fig3_pca_morphospace_real_vs_synthetic.png",
+        "figure_4_performance_bar": "e:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\SAM-Photo\\thin_plate_sphine_based_data_augmentation\\figures\\fig4_model_benchmark_comparison_bar.png"
+    }
+}

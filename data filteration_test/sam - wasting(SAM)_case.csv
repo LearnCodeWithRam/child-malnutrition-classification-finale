@@ -1,0 +1,66 @@
+record_id,age_month,gender,height_cm,weight_kg,muac_mm,date_of_birth,poshan_calculator_result,error_type,nutrition_status,serial_number,child_name,child_mother_name,locality,muac_classification,days_before,created_at,awc_code,match_status,validated_nutritional_category
+fc225e,4.60,Male,62.0,5.0,12,10/01/2026,Stunting: Moderately stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: MAM,,MAM,2854811030715,babu prasanthi,prasanthi,Urban,MAM,17days ,2026-05-16 09:01:18,28548110307,Matched & corrected from ground truth,SAM
+5df6d8,6.29,Male,71.5,6.7,13,21/10/2025,"Stunting: Normal
+Underweight: Moderately underweight
+Wasting: SAM
+MUAC: Normal",,SAM,2854921031944,Golli Venkata Raghu ram,Venkata Ramana,Rural,NORMAL,17,2026-05-20 05:26:20,28549210319,Matched & corrected from ground truth,SAM
+612dbf,7.10,Female,78.0,6.8,14,17/10/2025,Stunting: Normal | Underweight: Normal | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,28548190106163,Tirumalla sri mokshitha sri kartika ,tirumalla kotamma ,Rural,NORMAL,,2026-05-27 07:05:25,28548190106,Matched & corrected from ground truth,SAM
+6df11e,8.90,Male,89.0,8.1,15,11/9/2025,Stunting: Normal | Underweight: Normal | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,2854920020501,Sk. Lafiz layan,Nazeera,Coastal Area,NORMAL,,2026-05-20 06:29:26,28549200205,Matched & corrected from ground truth,SAM
+f511f9,10.15,Female,82.0,7.5,14,7/7/2025,Stunting: Normal | Underweight: Normal | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,2854921090972,Lekhana,Nagamma,Tribal Area,NORMAL,,2026-05-22 06:57:47,28549210909,Matched & corrected from ground truth,SAM
+ddd408,13.11,Male,78.0,6.8,15,04/04/2025,Stunting: Normal | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,2854816020809,Sk Mahammad Ali,Sk Mabhula,Urban,NORMAL,,2026-05-15 08:07:16,28548160208,Matched & corrected from ground truth,SAM
+2ebdc4,13.60,Female,8.7,75.0,14,14/04/2025,Stunting: Normal| Underweight: Normal | Wasting: SAM | MUAC: Normal MUAC | ,,MAM,28546180122031,Kandelli Tanvi,jyothi,Rural,NORMAL,60 days,2026-05-20 05:00:52,28546180122,Matched & corrected from ground truth,SAM
+cf44e1,19.21,Female,72.0,6.6,12,1/10/2024,Stunting: Severly stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: MAM,,MAM,2854921092685,Mahitha,Ramanjamma,Rural,MAM,20,2026-05-22 09:54:58,28549210926,Matched & corrected from ground truth,SAM
+24af96,20.21,Male,75,7.1,13,2024-10-13 00:00:00,"Stunting: Severly stunted
+Underweight: Severly underweight
+Wasting: SAM
+MUAC: Normal",,SAM,2854803070501,,,,,,2026-05-12 05:43:34,28548030705,NOT in ground truth file - unable to verify/correct,SAM
+44cb7a,21.20,Male,82.0,8.4,13,29/7/2024,Stunting: Normal | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,2854921011835,Sannepogu Akshay kumar,Akhila,Rural,NORMAL,,2026-05-19 06:42:00,28549210118,Matched & corrected from ground truth,SAM
+53842d,22.28,Male,76.5,7.3,13,20/06/2024,Stunting: Severly stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,082016801,Mudugu babu ,vaishnavi,Rural,NORMAL,,2026-05-18 09:39:52,unknown,Matched & corrected from ground truth,SAM
+65d6ef,23.15,Male,72.2,6.6,11,7/6/2024,"Stunting: Severly stunted
+Underweight: Severly underweight
+Wasting: SAM
+MUAC: SAM",,SAM,2854921090970,premkumar,Hanumakka,Tribal Area,SAM,20,2026-05-22 06:45:22,28549210909,Matched & corrected from ground truth,SAM
+78e313,26.13,Male,87.0,8.4,17,8/3/2024,Stunting: Normal | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,28548190417460,Ganesh orchu ,soujanya ,Rural,NORMAL,,2026-05-21 06:44:37,28548190417,Matched & corrected from ground truth,SAM
+c5ab2f,26.17,Male,94.0,10.0,17,08/03/2024,Stunting: Normal | Underweight: Moderately underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,285481107022,ballepalli ayansh,geethapavani,Rural,NORMAL,23,2026-05-25 07:24:27,28548110702,Matched & corrected from ground truth,SAM
+3f253a,27.16,Male,82.0,8.6,13,10/2/2024,Stunting: Moderately stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,28548010519154,Gowtham nandha,Rani,Rural,NORMAL,24,2026-05-26 06:28:32,28548010519,Matched & corrected from ground truth,SAM
+ec5937,28.24,Female,88.0,9.0,15,25/12/2023,Stunting: Normal| Underweight: Moderately underweight | Wasting: SAM | MUAC: Normal MUAC |,,NORMAL,2854913060805,B . Aadhya sri,Amanu,Rural,NORMAL,,2026-05-19 05:23:51,28549130608,Matched & corrected from ground truth,SAM
+24c4ec,29.28,Female,84.0,8.0,15,17/11/2023,Stunting: Moderately stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: N/A,,NORMAL,2854816020806,Sk Nazeer,Sk Saidhabhi,Urban,NORMAL,,2026-05-15 06:52:57,28548160208,Matched & corrected from ground truth,SAM
+88c265,30.15,Male,90.0,10.0,15,07/11/2023,Stunting: Normal | Underweight: Moderately underweight | Wasting: SAM | MUAC: Normal MUAC |,,NORMAL,2854708022811,K Mahira Nandan,Sesha mani,Rural,NORMAL,,2026-05-22 07:55:19,28547080228,Matched & corrected from ground truth,SAM
+7babbe,30.25,Male,84.3,8.7,14,28/10/2023,Stunting: Moderately stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,2854811111287,Lakshmi srimanth,kavitha,Rural,NORMAL,20days ,2026-05-23 07:58:08,28548111112,Matched & corrected from ground truth,SAM
+c92720,30.40,Female,93.5,10.2,14,25/11/2023,Stunting: Normal | Underweight: Normal | Wasting: SAM | MUAC: Normal MUAC,,MAM,28548110442892,v.afyasree,mounika,Rural,NORMAL,25day,2026-05-29 06:34:52,28548110442,Matched & corrected from ground truth,SAM
+74ed5a,32.22,Male,84.5,9.0,13,22/08/2023,"Stunting: Moderately stunted
+Underweight: Severly underweight
+Wasting: SAM
+MUAC: Normal",,SAM,285490904042,Shaik Abdul Rehan,Shaik suhana,Rural,NORMAL,04/5/2026,2026-05-14 09:08:23,28549090404,Matched & corrected from ground truth,SAM
+8f6d92,32.27,Male,81.5,8.5,12,23/08/2023,Stunting: Severly stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: MAM,,MAM,285470804086,K Kevin,Mary Matha,Rural,MAM,By birth Mam child w,2026-05-20 07:55:32,28547080408,Matched & corrected from ground truth,SAM
+34f533,35.24,Male,94.0,10.0,13,10/06/2023,Stunting: Normal | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,28546010529076,Modugu Dakshith,veera veni,Rural,NORMAL,180 days,2026-06-04 04:56:26,28546010529,Matched & corrected from ground truth,SAM
+4fd8dc,35.24,Male,87.0,9.4,14,22/5/2023,Stunting: Moderately stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,285481103078,sk Rohan,mastanbee,Urban,NORMAL,11days,2026-05-16 05:38:42,28548110307,Matched & corrected from ground truth,SAM
+e7a32d,35.28,Male,85.0,9.0,13,22/5/2023,"Stunting: Severly stunted
+Underweight: Severly underweight
+Wasting: SAM
+MUAC: Normal",,SAM,2854811050563,sk nagur ,sultan,Rural,NORMAL,19 days' ,2026-05-20 06:27:28,28548110505,Matched & corrected from ground truth,SAM
+1ea54e,36.28,Female,86.3,8.0,15,17/04/2023,Stunting: Moderately stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: N/A,,NORMAL,2854816020804,Sk Aman,Sk Shahedha begam,Urban,NORMAL,,2026-05-15 06:15:48,28548160208,Matched & corrected from ground truth,SAM
+8956da,39.70,Male,85.5,9.3,14,13/02/2023,"Stunting: Severly stunted
+Underweight: Severly underweight
+Wasting: SAM
+MUAC: Normal",,SAM,285470804074,G Nehan pranay,sony,Rural,NORMAL,18,2026-05-20 06:01:16,28547080407,Matched & corrected from ground truth,SAM
+d29185,42.19,Female,93.1,10.2,14,3/11/2022,Stunting: Normal | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,285481112369,D.Blessi,Pujitha,Rural,NORMAL,20days ,2026-05-22 05:37:03,28548111236,Matched & corrected from ground truth,SAM
+fa886d,43.21,Male,97.0,11.5,14,30/09/2022,Stunting: Normal | Underweight: Moderately underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,2854823021515,SK Ashif,Nagoorbee,Urban,NORMAL,19,2026-05-21 07:12:19,28548230215,Matched & corrected from ground truth,SAM
+be5d7e,44.00,Male,99.0,11.5,13,21/09/2022,Stunting: Normal | Underweight: Moderately underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,285480801168,N shalon ,bhavani,Rural,NORMAL,20,2026-05-22 04:14:57,28548080116,Matched & corrected from ground truth,SAM
+3fef52,44.70,Female,89.3,9.6,12,15/09/2022,Stunting: Moderately stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: MAM,,MAM,2854616050101,Kukkala Lasya Sri,K Yamuna,Rural,MAM,20,2026-05-22 08:34:40,28546160501,Matched & corrected from ground truth,SAM
+9f88bb,45.12,Male,116.0,15.5,16,13/08/2022,Stunting: Normal | Underweight: Normal | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,2854616081905,Bandi Satwik,B Tulasi Lakshmi,Rural,NORMAL,,2026-05-27 02:56:03,28546160819,Matched & corrected from ground truth,SAM
+309b8c,46.13,Female,94.0,10.2,13,13/07/2022,Stunting: Normal | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,28546180305064,Kattunga Bala Venkata Pratyusha,Parvathi ,Rural,NORMAL,60days,2026-05-26 08:59:45,28546180305,Matched & corrected from ground truth,SAM
+821a80,47.80,Male,91.6,10.1,20,21/06/2022,Stunting: Moderately stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,28546010504066,chilakapati Enosh Paul,Chandini,Rural,NORMAL,180 days ,2026-05-29 07:09:53,28546010504,Matched & corrected from ground truth,SAM
+efe225,48.17,Male,107.0,13.5,15,17/05/2022,Stunting: Normal | Underweight: Normal | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,2854715101609,shaik Aayan,nurjahan,Rural,NORMAL,,2026-06-03 08:27:17,28547151016,Matched & corrected from ground truth,SAM
+bd85e3,51.22,Male,96.3,10.6,12,23/1/2022,"Stunting: Moderately stunted
+Underweight: Severly underweight
+Wasting: SAM
+MUAC: MAM",,SAM,285492110262,Hanivic joseph,Chinnammadu,Rural,MAM,10,2026-05-15 03:48:47,28549211026,Matched & corrected from ground truth,SAM
+639227,52.23,Female,92.6,10.1,13,03/01/2022,Stunting: Moderately stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,2854604062106,K Anvitha,K.Pujitha,Tribal Area,NORMAL,,2026-05-26 10:51:02,28546040621,Matched & corrected from ground truth,SAM
+9596e5,53.21,Female,98.3,10.9,12,27/11/2021,Stunting: Normal | Underweight: Severly underweight | Wasting: SAM | MUAC: MAM,,MAM,2854921071019,Gunti Sowmya,Jayasri,Rural,MAM,15,2026-05-18 07:05:09,28549210710,Matched & corrected from ground truth,SAM
+4024dc,54.27,Male,95.8,9.9,14,18/10/2021,Stunting: Moderately stunted | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,2854816020808,Sk Mahmad Usman,Sk Saidhabhi,Urban,NORMAL,,2026-05-15 07:17:33,28548160208,Matched & corrected from ground truth,SAM
+a22c73,56.12,Male,99.9,12.0,14,14/09/2021,Stunting: Normal | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,28546180304057,Netala Ivansh,Suryavathi,Rural,NORMAL,180 days,2026-05-26 08:59:42,28546180304,Matched & corrected from ground truth,SAM
+8aa2a9,58.23,Male,105.0,12.0,16,3/7/2021,Stunting: Normal | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,2854811101788,j.chaitanya,anjali,Rural,NORMAL,20days ,2026-05-26 05:40:11,28548111017,Matched & corrected from ground truth,SAM
+880fdd,59.20,Female,101.2,11.7,13,24/06/2021,Stunting: Normal | Underweight: Severly underweight | Wasting: SAM | MUAC: Normal MUAC,,MAM,28546180310060,Illa Tarani,Meghana,Rural,NORMAL,180 days,2026-05-26 08:59:43,28546180310,Matched & corrected from ground truth,SAM
+6825bd,59.22,Male,104.2,13.0,12,30/5/2021,Stunting: Normal | Underweight: Moderately underweight | Wasting: SAM | MUAC: MAM,,MAM,2854921090967,Peddanna,pothamma,Tribal Area,MAM,20,2026-05-22 06:14:02,28549210909,Matched & corrected from ground truth,SAM
+6dd6aa,60.00,Male,110,11.9,15.5,,Stunting: Normal | Underweight: Severely Underweight | Wasting: SAM | MUAC: Normal MUAC,,NORMAL,2854810000000,,,,,,2026-05-08 07:49:54,28548050121,NOT in ground truth file - unable to verify/correct,SAM

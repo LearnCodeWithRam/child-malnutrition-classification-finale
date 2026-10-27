@@ -1,0 +1,16 @@
+Metric / Pipeline Parameter,Value,Scientific Rationale
+Master Dataset Total Clean Specimens,6203,Raw input specimen count from final_cleaned_dataset_full.csv
+Original Train Set Total (80%),4963,80% stratified original training cohort
+Original Test Set Total (20%),1240,20% stratified unaugmented test cohort
+Train ONC Original Count,4223,80% stratified ONC baseline training samples
+Train MAM Original Count,566,80% stratified MAM baseline training samples
+Train SAM Original Count,174,80% stratified SAM baseline training samples
+Test ONC Count (Untouched),1056,20% stratified ONC baseline test samples
+Test MAM Count (Untouched),141,20% stratified MAM baseline test samples
+Test SAM Count (Untouched),43,20% stratified SAM baseline test samples
+Synthetic SAM Generated in Train,533,Synthetic SAM samples generated to balance train set to 707
+Synthetic MAM Generated in Train,141,Synthetic MAM samples generated to balance train set to 707
+"Augmented Train Set Total (ONC=4223, MAM=707, SAM=707)",5637,Main training dataset with class-balanced minority classes
+"1:1:1 Balanced Train Set Total (ONC=707, MAM=707, SAM=707)",2121,Equal representation training set matching 707 minority target
+SAM PC1 KS-Test p-value,0.9583,Distribution consistency test (p > 0.05 indicates distribution alignment)
+MAM PC1 KS-Test p-value,0.8882,Distribution consistency test (p > 0.05 indicates distribution alignment)

@@ -1,0 +1,38 @@
+{
+  "audit_id": "20261021_172101_8006379a",
+  "timestamp_iso": "2026-10-21T17:21:01.247703",
+  "source_filename": "34b1be_image3_with_ruler.jpg",
+  "qa_status": "PASS",
+  "qa_flags": [],
+  "timing_sec": {
+    "phase1_vision": 1.622,
+    "phase2_classification": 0.145,
+    "total": 1.768
+  },
+  "biometrics": {
+    "arm_side_detected": "Left",
+    "scale_px_per_cm": 11.72,
+    "total_arm_length_cm": 28.5,
+    "upper_arm_length_cm": 14.43,
+    "forearm_length_cm": 14.16,
+    "vision_estimated_muac_cm": 11.56,
+    "centroid_size": 39.6
+  },
+  "clinical_triage": {
+    "tier": "RED",
+    "badge": "\ud83d\udd34 RED: High Risk / Acute Malnutrition (SAM/MAM)",
+    "category": "High Risk Malnourished (Acute Wasting Detected)",
+    "malnutrition_probability": 0.9843,
+    "primary_wasting_locus": "Proximal Brachium/Bicep (L14-L13)",
+    "clinical_action": "Urgent clinical assessment and nutrition rehabilitation referral."
+  },
+  "saved_files": [
+    "01_original_image.jpg",
+    "02_contour_overlay.png",
+    "03_cartesian_plot.png",
+    "04_side_by_side_quality_check.png",
+    "05_egat_attention_heatmap.png",
+    "landmarks_22.json"
+  ],
+  "storage_path": "E:\\ap-govt-EDA-model-tainning-testing\\GM_out_of_sample_classification-main\\MC-ONC-Based-Classification\\Full_Demo_MC_ONC_Classification\\audit_logs\\20261021_172101_8006379a"
+}
